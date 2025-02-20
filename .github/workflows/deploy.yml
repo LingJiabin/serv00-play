@@ -32,4 +32,5 @@ jobs:
           LOGININFO: ${{vars.LOGININFO}}
         run: |
           chmod +x ./revive.sh
+          chmod +x ./keepalive.sh
           ./revive.sh
