@@ -17,8 +17,6 @@ for info in "${hosts_info[@]}"; do
   host=$(echo $info | jq -r ".host")
   port=$(echo $info | jq -r ".port")
   pass=$(echo $info | jq -r ".password")
-
-  ls -ahl /home/$user/serv00-play/keepalive.sh
   
   if [[ "$AUTOUPDATE" == "Y" ]]; then
     script="/home/$user/serv00-play/keepalive.sh autoupdate ${SENDTYPE} \"${TELEGRAM_TOKEN}\" \"${TELEGRAM_USERID}\" \"${WXSENDKEY}\" \"${BUTTON_URL}\" \"${pass}\""
